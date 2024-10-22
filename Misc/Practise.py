@@ -150,6 +150,8 @@ class sample3(sample,sample1,sample2):
 # s=sample3("d")
 # print(s.apple())
 
+#####################################################################################
+# Aggregation
 
 class Company:
     def __init__(self,name,age,pay):
@@ -171,6 +173,19 @@ class Pay:
 # e1=Company("Mark",45,15000)
 # p=Pay(e1)
 # print(p.total_ctc())
+
+class Sample:
+    def apple(self):
+        return "Apple Products"
+
+class Updates:
+    def __init__(self,obj):
+        self.obj=obj
+    def apple_Updates(self):
+        return f"All the {self.obj.apple()} have got new Updates"
+s=Sample()
+upt=Updates(s)
+print(upt.apple_Updates())
 
 ############################################################
 #Composition
